@@ -1,16 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <gf.black.tv@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/07 20:05:27 by muganiev         ###   ########.fr       */
+/*   Created: 2022/05/16 14:40:38 by muganiev          #+#    #+#             */
+/*   Updated: 2022/05/23 20:50:40 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int ac, char **av)
+#include "libft.h"
+
+size_t
+	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    
+	size_t	i;
+
+	i = 0;
+	if (size > 0)
+	{
+		while (src[i] && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = 0;
+	}
+	while (src[i])
+		i++;
+	return (i);
 }

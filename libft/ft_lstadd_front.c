@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <gf.black.tv@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/07 20:05:27 by muganiev         ###   ########.fr       */
+/*   Created: 2022/05/31 17:55:12 by muganiev          #+#    #+#             */
+/*   Updated: 2022/06/04 21:59:01 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int ac, char **av)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    
+	new->next = *lst;
+	*lst = new;
 }

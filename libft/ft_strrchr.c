@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <gf.black.tv@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/07 20:05:27 by muganiev         ###   ########.fr       */
+/*   Created: 2022/05/16 14:40:48 by muganiev          #+#    #+#             */
+/*   Updated: 2022/06/04 21:42:53 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int ac, char **av)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-    
+	char	*ptr;
+
+	ptr = 0;
+	while (*s)
+	{
+		if (*s == (char)c)
+			ptr = (char *)s;
+		s++;
+	}
+	if (*s == (char)c)
+		ptr = (char *)s;
+	return (ptr);
 }
