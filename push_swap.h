@@ -6,11 +6,19 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/07 20:05:12 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/08 15:55:02 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <stdio.h>
+# include <stdlib.h>
 #include "libft/libft.h"
+
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
 typedef struct node
 {
 	int			num;
@@ -29,3 +37,12 @@ typedef struct all
     int len_a;
     int len_b;
 }t_all;
+
+//parsing
+void error(void);
+void check_int(char **str);
+void check_same(char **str);
+void	arg_check(char **arr);
+char	**ft_args_together(char **av);
+
+#endif
