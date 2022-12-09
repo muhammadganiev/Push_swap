@@ -1,4 +1,4 @@
-#include "./push_swap.h"
+#include "../push_swap.h"
 void error(void)
 {
 	write(2, "ERROR\n", 6);
@@ -17,25 +17,23 @@ void	free_arr(char **arr, int flag)
 		error();
 }
 
-void check_int(char **str)
+void	same_num(char	**str)
 {
-    int i;
-    int j;
+	int	i;
+	int j;
 
-    i = 0;
-    while (str[i])
-    {
-        j = 0;
-        while (str[i][j])
-        {
-            if (str[i][j] == '-' || str[i][j] == '+')
-                j++;
-            if (!ft_isdigit(str[i][j]))
-                error();
-            j++;
-        }
-        i++;
-    }
+	i = 0;
+	while (str[i])
+	{
+		j = i + 1;
+		while (str[j])
+		{
+			if (ft_atoi(str[i]) == ft_atoi(str[j]))
+				free_arr(str, 1);
+			j++;
+		}
+		i++;
+	}
 }
 
 void	arg_check(char **arr)

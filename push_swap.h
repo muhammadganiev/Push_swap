@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/08 15:55:02 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:50:02 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,15 @@ typedef struct all
     int len_b;
 }t_all;
 
+//main
+t_all	*parsing(char	**av);
+
 //parsing
 void error(void);
-void check_int(char **str);
-void check_same(char **str);
+void	free_arr(char **arr, int flag);
+void	same_num(char	**str);
 void	arg_check(char **arr);
 char	**ft_args_together(char **av);
+//sorting
 
 #endif
