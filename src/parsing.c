@@ -81,4 +81,5 @@ char	**ft_args_together(char **av)
 	str = ft_split(line, ' ');
 	free(line);
 	return (str);
+
 }

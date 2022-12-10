@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/08 18:41:02 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/10 15:10:01 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ t_all	*parsing(char	**av)
 	str = ft_args_together(av);
 	arg_check(str);
 	same_num(str);
-	list = init_struct(str);
-	add_to_stack(list, str);
+	list = lists_init(str);
+	stack_add(list, str);
 	free_arr(str, 0);
 	return (list);
 }
