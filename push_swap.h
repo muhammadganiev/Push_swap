@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/10 16:13:47 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/10 17:18:19 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,16 @@ void	free_arr(char **arr, int flag);
 void	same_num(char	**str);
 void	arg_check(char **arr);
 char	**ft_args_together(char **av);
+
 //sorting
 
+//list init
+void	listadd(t_node **stack_a, t_node *new);
+t_node	*new_list(int num, int index);
+t_all	*lists_init(char **str);
+
+//stack add
+void	stack_add(t_all *all, char **arr);
+void	bubble_sort(t_all *all, int *sort, int *non_sort, int len);
+void	create_stack(t_all	*all, int *sort, int *non_sort, int len);
 #endif

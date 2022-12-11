@@ -6,13 +6,13 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:13:16 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/10 16:13:19 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/10 17:12:11 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-t_all	*init_struct(char **str)
+t_all	*lists_init(char **str)
 {
 	t_all 	*all;
 	int		i;

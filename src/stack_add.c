@@ -6,13 +6,13 @@
 /*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:14:29 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/10 16:14:43 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/11 15:55:20 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	add_to_stack(t_all *all, char **arr)
+void	stack_add(t_all *all, char **arr)
 {
 	int		*non_sort;
 	int		*sort;

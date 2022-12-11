@@ -6,11 +6,12 @@
 #    By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:28:01 by muganiev          #+#    #+#              #
-#    Updated: 2022/12/08 18:31:17 by muganiev         ###   ########.fr        #
+#    Updated: 2022/12/10 17:07:47 by muganiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES =	src/parsing.c		src/sort.c		push_swap.c\
+FILES =	src/parsing.c		src/sort.c		src/stack_add.c		push_swap.c\
+		src/stack_add.c\
 
 
 LIBFT		=	cd libft && make
