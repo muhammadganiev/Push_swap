@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/13 15:10:37 by muganiev          #+#    #+#             */
+/*   Updated: 2022/12/13 15:11:02 by muganiev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
-void error(void)
+
+void	error(void)
 {
 	write(2, "ERROR\n", 6);
 	exit(0);
@@ -8,9 +21,9 @@ void error(void)
 void	free_arr(char **arr, int flag)
 {
 	int	i;
-	
+
 	i = -1;
-	while(arr[++i])
+	while (arr[++i])
 		free(arr[i]);
 	free(arr);
 	if (flag)
@@ -20,7 +33,7 @@ void	free_arr(char **arr, int flag)
 void	same_num(char	**str)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	while (str[i])
@@ -66,7 +79,7 @@ char	**ft_args_together(char **av)
 	char	*line;
 	char	*tmp;
 	int		i;
-	
+
 	line = ft_strdup(av[1]);
 	i = 1;
 	while (av[++i])
@@ -81,5 +94,4 @@ char	**ft_args_together(char **av)
 	str = ft_split(line, ' ');
 	free(line);
 	return (str);
-
 }

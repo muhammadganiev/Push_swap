@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_add.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:14:29 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/11 15:55:20 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/12 19:48:32 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	bubble_sort(t_all *all, int *sort, int *non_sort, int len)
 	int		j;
 	int		tmp;
 	int		count;
-	
+
 	i = 0;
 	count = 0;
 	while (i < len)
@@ -52,12 +52,12 @@ void	bubble_sort(t_all *all, int *sort, int *non_sort, int len)
 		while (j < (len - 1 - i))
 		{
 			if (sort[j] > sort[j + 1])
-				{
-					tmp = sort[j + 1];
-					sort[j + 1] = sort[j];
-					sort[j] = tmp;
-					count++;
-				}
+			{
+				tmp = sort[j + 1];
+				sort[j + 1] = sort[j];
+				sort[j] = tmp;
+				count++;
+			}
 			j++;
 		}
 		i++;
@@ -69,9 +69,9 @@ void	create_stack(t_all	*all, int *sort, int *non_sort, int len)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{	
 		j = 0;
 		while (j < len)

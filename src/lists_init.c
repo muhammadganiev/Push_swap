@@ -3,20 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   lists_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:13:16 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/10 17:12:11 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/12 19:49:18 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+t_node	*new_list(int num, int index)
+{
+	t_node	*lst;
+
+	lst = malloc(sizeof(t_node));
+	if (!lst)
+		return (NULL);
+	lst->num = num;
+	lst->flag = 0;
+	lst->index = index;
+	lst->next = NULL;
+	lst->prev = NULL;
+	return (lst);
+}
+
 t_all	*lists_init(char **str)
 {
-	t_all 	*all;
+	t_all	*all;
 	int		i;
-	
+
 	i = 0;
 	while (str[i])
 		i++;
@@ -36,25 +51,10 @@ t_all	*lists_init(char **str)
 	return (all);
 }
 
-t_node	*new_list(int num, int index)
-{
-	t_node	*lst;
-
-	lst = malloc(sizeof(t_node));
-	if (!lst)
-		return (NULL);
-	lst->num = num;
-	lst->flag = 0;
-	lst->index = index;
-	lst->next = NULL;
-	lst->prev = NULL;
-	return (lst);
-}
-
 void	listadd(t_node **stack_a, t_node *new)
 {
 	t_node	*tmp;
-		
+
 	if (!new)
 		return ;
 	tmp = *stack_a;

@@ -3,10 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <muganiev@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:50:13 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/09 18:50:14 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:15:14 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../push_swap.h"
 
