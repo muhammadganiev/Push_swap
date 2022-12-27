@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/13 15:10:19 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:48:05 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,23 @@ t_all	*lists_init(char **str);
 void	stack_add(t_all *all, char **arr);
 void	bubble_sort(t_all *all, int *sort, int *non_sort, int len);
 void	create_stack(t_all	*all, int *sort, int *non_sort, int len);
+
+//comands
+void	swap_a(t_all *all, int flag);
+void	swap_b(t_all *all, int flag);
+void	swap_all(t_all *all, int flag);
+
+void	rotate_a(t_all *all, int flag);
+void	rotate_b(t_all *all, int flag);
+void	rotate_all(t_all *all, int flag);
+
+void	rev_rotate_a(t_all *all, int flag);
+void	rev_rotate_b(t_all *all, int flag);
+void	rev_rotate_all(t_all *all, int flag);
+
+void	push_a(t_all *all, int flag);
+void	push_b(t_all *all, int flag);
+
+//sorting
+void	sort_three_a(t_all *all);
 #endif

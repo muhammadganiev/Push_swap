@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/13 15:11:52 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:45:51 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ t_all	*parsing(char	**av)
 	return (list);
 }
 
+void	sort(t_all *all)
+{
+	if (all->size_a == 2)
+		swap_a(all, 1);
+	else if (all->size_a == 3)
+		sort_three_a(all);
+}
+
 int	main(int ac, char **av)
 {
 	t_all	*all;
@@ -33,6 +41,7 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		all = parsing(av);
+		sort(all);
 	}
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 18:57:26 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/13 15:09:51 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:38:54 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_a(t_all *all)
+void	pa(t_all *all)
 {
 	t_node	*tmp;
 
@@ -36,7 +36,7 @@ void	push_a(t_all *all)
 	all->stack_b = tmp;
 }
 
-void	push_b(t_all *all)
+void	pb(t_all *all)
 {
 	t_node	*tmp;
 
@@ -60,11 +60,11 @@ void	push_b(t_all *all)
 	all->stack_a = tmp;
 }
 
-void	pa(t_all *all, int flag)
+void	push_a(t_all *all, int flag)
 {
 	if (all->size_b == 0)
 		return ;
-	push_a(all);
+	pa(all);
 	if (all->size_b == 1)
 		all->stack_b = NULL;
 	all->size_a++;
@@ -73,11 +73,11 @@ void	pa(t_all *all, int flag)
 		write(1, "pa\n", 3);
 }
 
-void	pb(t_all *all, int flag)
+void	push_b(t_all *all, int flag)
 {
 	if (all->size_a == 0)
 		return ;
-	push_b(all);
+	pb(all);
 	if (all->size_a == 1)
 		all->stack_a = NULL;
 	all->size_a--;
