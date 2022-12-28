@@ -6,13 +6,14 @@
 #    By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:28:01 by muganiev          #+#    #+#              #
-#    Updated: 2022/12/27 15:48:17 by muganiev         ###   ########.fr        #
+#    Updated: 2022/12/28 14:03:38 by muganiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES =	src/parsing.c		src/sort.c		src/stack_add.c		push_swap.c\
-		src/stack_add.c		src/list_init.c		src/push_comands.c\
-		src/reverse_comands.c	src/rotate_comands.c	src/swap_comands.c\
+FILES =	src/parsing.c		src/sort.c		push_swap.c\
+		src/stack_add.c		src/lists_init.c		src/push_comands.c\
+		src/reverse_rotate_comands.c	src/rotate_comands.c\
+		src/swap_comands.c\
 
 
 LIBFT		=	cd libft && make

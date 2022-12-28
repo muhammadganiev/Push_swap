@@ -6,35 +6,35 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:14:29 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/12 19:48:32 by muganiev         ###   ########.fr       */
+/*   Updated: 2022/12/28 13:55:10 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	stack_add(t_all *all, char **arr)
+void	create_stack(t_all	*all, int *sort, int *non_sort, int len)
 {
-	int		*non_sort;
-	int		*sort;
-	int		i;
-	int		len;
-	int		num;
+	int	i;
+	int	j;
 
-	len = 0;
-	i = -1;
-	while (arr[++i])
-		len++;
-	non_sort = malloc(sizeof(int) * (len));
-	sort = malloc(sizeof(int) * (len));
 	i = 0;
 	while (i < len)
-	{
-		num = ft_atoi(arr[i]);
-		non_sort[i] = num;
-		sort[i] = num;
+	{	
+		j = 0;
+		while (j < len)
+		{
+			if (non_sort[i] == sort[j])
+			{
+				listadd(&all->stack_a, new_list(non_sort[i], j + 1));
+				j++;
+				break ;
+			}
+			j++;
+		}
 		i++;
 	}
-	bubble_sort(all, sort, non_sort, len);
+	free(non_sort);
+	free(sort);
 }
 
 void	bubble_sort(t_all *all, int *sort, int *non_sort, int len)
@@ -65,27 +65,27 @@ void	bubble_sort(t_all *all, int *sort, int *non_sort, int len)
 	create_stack(all, sort, non_sort, len);
 }
 
-void	create_stack(t_all	*all, int *sort, int *non_sort, int len)
+void	stack_add(t_all *all, char **arr)
 {
-	int	i;
-	int	j;
+	int		*non_sort;
+	int		*sort;
+	int		i;
+	int		len;
+	int		num;
 
+	len = 0;
+	i = -1;
+	while (arr[++i])
+		len++;
+	non_sort = malloc(sizeof(int) * (len));
+	sort = malloc(sizeof(int) * (len));
 	i = 0;
 	while (i < len)
-	{	
-		j = 0;
-		while (j < len)
-		{
-			if (non_sort[i] == sort[j])
-			{
-				listadd(&all->stack_a, new_list(non_sort[i], j + 1));
-				j++;
-				break ;
-			}
-			j++;
-		}
+	{
+		num = ft_atoi(arr[i]);
+		non_sort[i] = num;
+		sort[i] = num;
 		i++;
 	}
-	free(non_sort);
-	free(sort);
+	bubble_sort(all, sort, non_sort, len);
 }
