@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:10:37 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/13 15:11:02 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:24:10 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,6 @@ void	free_arr(char **arr, int flag)
 	free(arr);
 	if (flag)
 		error();
-}
-
-void	same_num(char	**str)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (str[i])
-	{
-		j = i + 1;
-		while (str[j])
-		{
-			if (ft_atoi(str[i]) == ft_atoi(str[j]))
-				free_arr(str, 1);
-			j++;
-		}
-		i++;
-	}
 }
 
 void	arg_check(char **arr)
@@ -94,4 +75,23 @@ char	**ft_args_together(char **av)
 	str = ft_split(line, ' ');
 	free(line);
 	return (str);
+}
+
+void	same_num(char	**str)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (str[i])
+	{
+		j = i + 1;
+		while (str[j])
+		{
+			if (ft_atoi(str[i]) == ft_atoi(str[j]))
+				free_arr(str, 1);
+			j++;
+		}
+		i++;
+	}
 }
