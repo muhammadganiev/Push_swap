@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2022/12/28 14:49:36 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:24:24 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,23 @@ void	push_b(t_all *all, int flag);
 
 //sorting
 void	sort_three_a(t_all *all);
+void	sort_four(t_all *all);
+void	sort_five(t_all *all);
+
+//chunks alg
+int		find_block(t_all *all);
+void	call_chunks(t_all *all);
+void	chunk(t_all *all);
+void	printstack(t_node *top);
+void	med_min_max_b(t_all *all);
+
+//med_min_max and indications
+void	med_min_max(t_all *all);
+int		sort_true(t_all *all);
+void	free_stack(t_all *all);
+void	push_down(t_all *all, int flag);
+
+//push back cmd
+int		find_position(t_all *all);
+void	push_back(t_all *all);
 #endif
