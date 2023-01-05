@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:41:41 by muganiev          #+#    #+#             */
-/*   Updated: 2023/01/04 19:05:45 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:54:12 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void	free_arr(char **arr, int flag);
 void	same_num(char	**str);
 void	arg_check(char **arr);
 char	**ft_args_together(char **av);
-
-//sorting
 
 //list init
 void	listadd(t_node **stack_a, t_node *new);

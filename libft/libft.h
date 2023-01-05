@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muganiev <gf.black.tv@gmail.com>           +#+  +:+       +#+        */
+/*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:41:00 by muganiev          #+#    #+#             */
-/*   Updated: 2022/06/04 21:57:32 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:02:22 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-int				ft_atoi(const char *str);
+long long		ft_atoi(const char *str);
 
 void			ft_bzero(void *s, size_t n);
 

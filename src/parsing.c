@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:10:37 by muganiev          #+#    #+#             */
-/*   Updated: 2023/01/04 19:24:10 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:35:16 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	arg_check(char **arr)
 				free_arr(arr, 1);
 			j++;
 		}
-		num = atoi(arr[i]);
-		if (num > MAX_INT || num < MIN_INT)
+		num = ft_atoi(arr[i]);
+		if ((num > 2147483647) || (num < -2147483648))
 			free_arr(arr, 1);
 	}
 }

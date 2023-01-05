@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:40:59 by muganiev          #+#    #+#             */
-/*   Updated: 2023/01/04 18:15:49 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:10:07 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_all	*parsing(char	**av)
 {
-	t_all	*list;
-	char	**str;
+	t_all		*list;
+	char		**str;
 
 	str = ft_args_together(av);
 	arg_check(str);
