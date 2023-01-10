@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:10:37 by muganiev          #+#    #+#             */
-/*   Updated: 2023/01/05 17:35:16 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:30:01 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error(void)
 {
-	write(2, "ERROR\n", 6);
+	write(2, "Error\n", 6);
 	exit(0);
 }
 
