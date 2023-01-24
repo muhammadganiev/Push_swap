@@ -6,7 +6,7 @@
 /*   By: muganiev <muganiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:50:13 by muganiev          #+#    #+#             */
-/*   Updated: 2023/01/10 20:36:01 by muganiev         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:53:44 by muganiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,10 @@ void	sort_five(t_all *all)
 		{
 			med_min_max(all);
 			if (all->stack_a->index == all->min)
+				push_b(all, 1);
+			else if (all->stack_a->next->index == all->min)
 			{
+				rotate_a(all, 1);
 				push_b(all, 1);
 			}
 			else
